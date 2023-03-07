@@ -2,10 +2,15 @@
 ## local development Preview ?
 1. `npm i docsify-cli -g  `
 2. `npm start`
-3. Manage sidebark links ? add `_sidebar.md`
-4. Add your links in `./doc/your-own-doc-section.md`
-5. Generate diagram? Use Mermaid syntax. supported `(https://mermaid.js.org/intro/)`
 
+## Add new documentation section
+1. Add menu links ? add filename in `_sidebar.md`
+2. Example you make a new section `./doc/your-own-doc-section.md`
+3. Link it inside `_sidebar.md`
+
+## Automatically make diagram with textcode?
+1. Go mermaid playground website - google it
+2. Example we have is  `mermaidexample.md`
 
 ## Serve process on github pages once master is merged
 1. This serve is using github pipeline to serve docsify as github pages
