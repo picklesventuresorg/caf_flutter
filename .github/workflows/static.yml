@@ -20,7 +20,14 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-jobs:
+jobs:  
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: tool3/docsify-action@master
+      with:
+        github_token: ${{ secrets.GP_TOKEN }}
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -40,3 +47,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+
+ 

@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ical.marudot.com//iCal Event Maker
+X-WR-CALNAME:Onboarding Walkthrough : PAS, PAIRS and General webs applications
+NAME:Onboarding Walkthrough : PAS, PAIRS and General webs applications
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+LAST-MODIFIED:20201011T015911Z
+TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Singapore
+X-LIC-LOCATION:Asia/Singapore
+BEGIN:STANDARD
+TZNAME:+08
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20220826T081037Z
+UID:1661501397677-76976@ical.marudot.com
+DTSTART;TZID=Asia/Singapore:20220809T120000
+DTEND;TZID=Asia/Singapore:20220809T120000
+SUMMARY:Onboard Walkthrough: Pas\, Pairs and business webportal
+DESCRIPTION:Please onboard me with a brief walkthrough on the business apps
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Onboard Walkthrough: Pas, Pairs and business webportal
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
