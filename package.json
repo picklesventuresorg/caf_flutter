@@ -1,0 +1,25 @@
+{
+  "name": "picklesventuresorg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "docsify": "^4.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn start-doc  ",
+    "start-doc": "docsify serve ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/picklesventuresorg/pickles-venture.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/picklesventuresorg/pickles-venture/issues"
+  },
+  "homepage": "https://github.com/picklesventuresorg/pickles-venture#readme"
+}
