@@ -5,6 +5,10 @@
     - Starting
       - [Introduction](./docs/starting/introduction.md)
       - [Installation](./docs/starting/installation.md)
+    - [Architecture](./docs/essentials/architecture/architecture.md)
+      - [Bloc](./docs/essentials/architecture/bloc.md)
+      - [Repository](./docs/essentials/architecture/repository.md)
+      - [Dependency Injection](./docs/essentials/architecture/dependency_injection.md)
     - Mics
       - [MakeFile Command](./docs/misc/makefile_cmd.md)
       - [Hide Generated File](./docs/misc/hide_generated_file.md)

@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to XYZ's Flutter boilerplate template. This project was born out of our team's desire to streamline the Flutter development process, especially for developers who are new to Flutter. We've incorporated best practices, efficient coding standards, and a well-structured codebase to make your Flutter journey smoother and more enjoyable.
+Welcome to Pickles's CAF Flutter boilerplate template. This project was born out of our team's desire to streamline the Flutter development process, especially for developers who are new to Flutter. We've incorporated best practices, efficient coding standards, and a well-structured codebase to make your Flutter journey smoother and more enjoyable.
 
 ## Why this template?
 
