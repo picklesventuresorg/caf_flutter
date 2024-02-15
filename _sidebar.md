@@ -1,6 +1,6 @@
 - Introduction
   - [What is Flutter Genesis](./docs/starting/introduction.md)
-  - [Features]()
+  - [Out Of Box Features]()
 - Getting started
   - [Installation](/)
   - [How to use](./docs/starting/installation.md)
@@ -20,7 +20,7 @@
     - [BLoC]()
     - [Repository]()
     - [Dependencies Injection]()
-  - [Routing]()
+  - [Navigation]()
   - [Networking]()
   - [Theming]()
   - [Multi-Tenancy]()
