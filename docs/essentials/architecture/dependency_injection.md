@@ -1,31 +1,54 @@
 # Dependency Injection
 
-This document provides an overview of dependency injection in software architecture.
+**`GetIt`** offers a lightweight and flexible solution for dependency injection in Flutter apps. This overview delves into the key concepts and functionalities you'll need to manage dependencies effectively in your XYZ boilerplate project.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Benefits of Dependency Injection](#benefits-of-dependency-injection)
-- [Types of Dependency Injection](#types-of-dependency-injection)
-- [Implementing Dependency Injection](#implementing-dependency-injection)
-- [Best Practices](#best-practices)
-- [Conclusion](#conclusion)
+## Overview
+- **Single Source of Truth**: `GetIt` acts as a centralized registry for all dependencies, making it easier to manage and track them throughout your app.
+- **Loose Coupling**: Promote loose coupling between components, allowing them to work independently and reducing reliance on specific implementations.
+- **Testability**: Simplify unit testing by easily injecting mock dependencies for isolation.
 
-## Introduction
-Dependency injection is a design pattern that allows the separation of object creation and object usage. It helps to reduce tight coupling between classes and promotes code reusability and testability.
+## Essential Methods
+- **`registerFactory<T>(() => createInstance<T>())`**: 
+    - Creates a new instance of `T` each time it's requested. 
+    - Ideal for short-lived dependencies or those with custom logic for creation.
+- **`registerSingleton<T>(T instance)`**: 
+    - Creates a single instance of `T` and shares it throughout the app.
+    - Ideal for global state management or singletons with well-defined lifecycles.
+- **`registerLazySingleton<T>(() => createInstance<T>())`**: 
+    - Creates a single instance of `T` only when first requested.
+    - Similar to `registerSingleton`, but avoids unnecessary upfront instance creation.
+- **`registerSingletonWithDependencies<T>(() => createInstance<T>(dependencies))`**: 
+    - Creates a single instance of `T` with provided dependencies in the factory function.
+    - Useful when a singleton instance depends on other registered dependencies.
+- **`registerSingletonAsync<T>(Future<T> Function() createInstanceAsync):`**: 
+    - Asynchronously creates a single instance of `T`.
+    - Useful for fetching data from APIs or other asynchronous operations before providing the instance.
 
-## Benefits of Dependency Injection
-- Increased modularity and maintainability
-- Improved code reusability
-- Easier unit testing and mocking
-- Better separation of concerns
+## Usage 
+```dart
+final getIt = GetIt.instance;
 
-## Types of Dependency Injection
-There are three common types of dependency injection:
-1. Constructor Injection
-2. Setter Injection
-3. Interface Injection
+Future<void> setupLocator(FlavorConfig? config) async {
+    getIt.registerSingletonAsync<SharedPreferences>(
+      () => SharedPreferences.getInstance());
+    
+    getIt.registerLazySingleton(() => GoogleSignIn());
+    
+    getIt.registerSingletonWithDependencies<ConfigDAO>(
+    () => getIt<AppDatabase>().configDao,
+    dependsOn: [AppDatabase]);
 
-## Implementing Dependency Injection
-To implement dependency injection in your project, you can use a dependency injection framework or manually wire dependencies using a container or service locator.
+    getIt.registerFactory(() => AuthService(
+        client: getIt(),
+      ));
+}
+```
 
-### Example using a Dependency Injection Framework
+In `main.dart`
+```dart
+await setupLocator(config);
+```
+
+Use `getIt<T>()` to retrieve registered dependencies anywhere in your app.
+
+This is the minimal foundation of using `GetIt` in Flutter Applications.
