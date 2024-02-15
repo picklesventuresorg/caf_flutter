@@ -1,5 +1,8 @@
 ## MakeFile Command
-This project is equipped with MakeFile command to shorten command writing, to see available commands please refer to Makefile. Here are the following commands available as of now:
+This project uses MakeFile commands to simplify executing common tasks from the command line. Using MakeFile commands simplifies common tasks like generating bundles, IPAs, and APKs for different environments. It also handles running build runner, tests, and fixes.
+
+Here are the available MakeFile commands:
+
 
 ```sh
 # update the dependencies
