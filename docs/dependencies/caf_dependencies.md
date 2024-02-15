@@ -4,9 +4,15 @@
 - The `caf_ui` serves as the foundation for consistent and visually appealing user interfaces across all Flutter applications developed within CAF. It offers predefined UI components, standardized styles, and theming capabilities, ensuring a seamless and unified user experience.
 ```
     caf_flutter_ui:
-    git:
-      url: "git@github.com:picklesventuresorg/caf_flutter_ui.git"
-      ref: 1.0.0
+        git:
+            url: "git@github.com:picklesventuresorg/caf_flutter_ui.git"
+            ref: 1.0.0
+
+    caf_ui_responsive:
+      git:
+        url: "git@github.com:picklesventuresorg/caf_flutter_ui.git"
+        path: ./caf_ui_responsive
+        ref: 1.0.0
 ```
 
 ### Utilities & Helper
