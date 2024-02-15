@@ -8,6 +8,7 @@
     - Depedencies
       - [Dependencies](./docs/dependencies/dependencies.md)
       - [Dev Dependencies](./docs/dependencies/dev_dependencies.md)
+      - [CAF Dependencies](./docs/dependencies/caf_dependencies.md)
     - Mics
       - [MakeFile Command](./docs/misc/makefile_cmd.md)
       - [Hide Generated File](./docs/misc/hide_generated_file.md)
