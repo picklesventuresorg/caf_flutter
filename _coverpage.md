@@ -18,12 +18,6 @@
     </div>
 </div>
 
-> Road to Pickles Ventures Mobile
-
-<br /><br />
-
-Awesomeness awaits you ....
-
 <img src="./assets/upside-down-arrow.png" width="80px" />
 
 <!-- background color -->

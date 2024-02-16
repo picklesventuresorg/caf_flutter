@@ -1,10 +1,39 @@
+- Introduction
+  - [What is Flutter Genesis](./docs/starting/introduction.md)
+  - [Out Of Box Features]()
 - Getting started
-    - [Home](/)
-    - [Let's begin](./docs/intro.md)
-    - [Mermaid example](./docs/mermaidexample.md)
-    - Starting
-      - [Introduction](./docs/starting/introduction.md)
-      - [Installation](./docs/starting/installation.md)
-    - Mics
-      - [MakeFile Command](./docs/misc/makefile_cmd.md)
-      - [Hide Generated File](./docs/misc/hide_generated_file.md)
+  - [Installation](/)
+  - [How to use](./docs/starting/installation.md)
+  - [Setup]()
+   - [Firebase]()
+   - [Flavors]()
+   - [Web Support]()
+  - [Folder Structure]()
+- Depedencies
+   - [Dependencies](./docs/dependencies/dependencies.md)
+   - [Dev Dependencies](./docs/dependencies/dev_dependencies.md)
+   - [CAF Dependencies](./docs/dependencies/caf_dependencies.md)
+- UI Components
+  - [Pickles Design System]()
+- Basics
+  - [Architecture]()
+   - [BLoC]()
+   - [Repository]()
+   - [Dependencies Injection]()
+  - [Navigation]()
+  - [Networking]()
+  - [Theming]()
+  - [Multi-Tenancy]()
+  - [Unit Testing]()
+  - [Localisation]()
+- Deployment
+  - [Setup Splash Screens & App Icons]()
+  - [Config Android]()
+  - [Config iOS]()
+  - [Config Web]()
+- CI/CD
+  - [Setup Fastlane]()
+  - [Setup GitHub Action]()
+- Advanced
+  - [MakeFile Command](./docs/misc/makefile_cmd.md)
+  - [Hide Generated File](./docs/misc/hide_generated_file.md)
