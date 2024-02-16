@@ -1,6 +1,6 @@
 # Dependency Injection
 
-**`GetIt`** offers a lightweight and flexible solution for dependency injection in Flutter apps. This overview delves into the key concepts and functionalities you'll need to manage dependencies effectively in your XYZ boilerplate project.
+**`GetIt`** handles dependency injection in Flutter apps. It is lightweight and flexible. This overview explains the key things you need to know to use GetIt effectively in the Boilerplate App. It focuses on the basic concepts and functions to manage dependencies well.
 
 ## Overview
 - **Single Source of Truth**: `GetIt` acts as a centralized registry for all dependencies, making it easier to manage and track them throughout your app.

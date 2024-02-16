@@ -1,6 +1,6 @@
 # Bloc
 
-This document introduces Flutter Bloc, our chosen state management solution for the XYZ boilerplate project. Bloc empowers you to manage application state effectively, ensuring a clean, predictable, and testable architecture.
+This section explains Flutter BLoC. It is the state management used in the Boilerplate App. BLoC makes managing app state easy. This results in apps that are clean, predictable, and testable.
 
 ## Overview
 
