@@ -20,7 +20,7 @@
    - [BLoC]()
    - [Repository]()
    - [Dependencies Injection]()
-  - [Navigation]()
+  - [Router](./docs/basics/router.md)
   - [Networking]()
   - [Theming]()
   - [Multi-Tenancy]()
