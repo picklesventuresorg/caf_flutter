@@ -35,6 +35,5 @@
   - [Setup Fastlane]()
   - [Setup GitHub Action]()
 - Advanced
-  - [State Management]()
   - [MakeFile Command](./docs/misc/makefile_cmd.md)
   - [Hide Generated File](./docs/misc/hide_generated_file.md)
