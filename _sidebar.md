@@ -8,7 +8,7 @@
    - [Firebase]()
    - [Flavors]()
    - [Web Support]()
-  - [Folder Structure]()
+  - [Folder Structure](./docs/starting/folder_structure.md)
 - Depedencies
    - [Dependencies](./docs/dependencies/dependencies.md)
    - [Dev Dependencies](./docs/dependencies/dev_dependencies.md)
