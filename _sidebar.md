@@ -2,12 +2,12 @@
   - [What is Flutter Genesis](./docs/starting/introduction.md)
   - [Out Of Box Features]()
 - Getting started
-  - [Installation](/)
-  - [How to use](./docs/starting/installation.md)
-  - [Setup]()
-   - [Firebase]()
-   - [Flavors]()
-   - [Web Support]()
+  - [Installation](./docs/starting/installation.md)
+  - [Get Started](./docs/starting/get_started.md)
+  - [Configure]()
+     - [Firebase]()
+     - [Flavors]()
+     - [Web Support]()
   - [Folder Structure]()
 - Depedencies
    - [Dependencies](./docs/dependencies/dependencies.md)
