@@ -25,7 +25,7 @@
   - [Theming]()
   - [Multi-Tenancy]()
   - [Unit Testing]()
-  - [Localisation]()
+  - [Localisation](./docs/essentials/localizations.md)
 - Deployment
   - [Setup Splash Screens & App Icons]()
   - [Config Android]()
