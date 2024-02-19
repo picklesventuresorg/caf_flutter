@@ -14,6 +14,7 @@
   * [DeepLinking](#heading--3-3)
   * [Error Handling](#heading--3-4)
   * [Page Transition](#heading--3-5)
+  * [Route Guard](#heading--3-6)
 
 
 <a id="heading--1"></a>
@@ -74,22 +75,32 @@
 
 - Pushing to a new page
 
-    Use the `push` method to navigate to a new page, adding it to the navigation stack:
+    Use the `push` or `pushNamed` method to navigate to a new page, adding it to the navigation stack:
     ```
     context.push(login);
+    // or
+    context.pushNamed(loginRouteName);
     ```
+    The difference between `push` and `pushNamed` is that `push` takes a route object directly, while `pushNamed` takes a named route as an argument.
+
 - Replacing current route
 
-    Utilize the `go` method to replace the current route with a new one:
+    Utilize the `go` or `goNamed` method to replace the current route with a new one:
     ```
     context.go(login);
+    // or
+    context.goNamed(loginRouteName);
     ```
+    Similar to `push` and `pushNamed`, the difference between `go` and `goNamed` is that `go` takes a route object directly, while `goNamed` takes a named route as an argument.
+
 - Animate the transition
 
     You can animate the transitions by specifying a Duration:
     ```
     context.push(login, duration: Duration(milliseconds: 500))
     ```
+    
+When using named routes, it's recommended to define route names as constants (e.g., `loginRouteName`) to avoid typos and make the code more readable.
 
 <a id="heading--2-4"></a>
 
@@ -138,7 +149,7 @@
     
 - Query parameter:
     
-    Accessing the URI directly allows getting current query values.
+    Accessing the URI directly allows getting current query values. Query params can be used to pass optional values.
 
     ```
     context.go('/products?category=shoes&sort=desc');
@@ -147,11 +158,18 @@
     builder: (context, state) {
         final category = state.uri.queryParameters['category'];
         final sort = state.uri.queryParameters['sort'];
+
+        // Use the query parameters to customize the behavior
+        // Optional values can be used to influence the displayed content or behavior
+        
+        if (category != null) {
+            // Do something with the 'category' parameter
+            }
         }
     )
     ```
 
-
+    
 - Extra Parameters
 
     The state.extra property allows passing an arbitrary map of data directly through context.go() that will be accessible in route builders.
@@ -209,7 +227,57 @@ Some advantages:
 - Lets you split main app UI from sub screens
 - Nested navigation control
 
-The shell builder is only rebuilt when switching between shell routes rather than individual inner routes for efficiency.
+
+##### Applying Different Keys to Main Route and Shell Route:
+
+In `GoRouter`, applying different keys to the `MainRoute` and `ShellRoute` can be useful for managing the navigation state and ensuring efficiency. This section will guide you on how to apply different keys to the `mainRoute` and `ShellRoute`.
+
+  - Applying Key to `MainRoute`
+    
+    You can use the `key` parameter to provide a unique identifier for that specific route. This `key` is essential for maintaining a consistent navigation state.
+
+    ```
+        final router = GoRouter(
+            initialLocation: '/',
+            navigatorKey: GlobalKey<NavigatorState>(), // Main route key
+            navigatorBuilder: (context, state, action, navigator) {
+                return Navigator(
+                key: navigator.navigatorKey,
+                pages: state.pages,
+                onPopPage: navigator.onPopPage,
+                );
+        });
+    ```
+
+  - Applying Key to `ShellRoute`
+    
+    When using a `ShellRoute` to create a base structure for your app, you can also apply a `key` to the `ShellRoute` itself. This key is distinct from the `MainRoute` `key` and is associated with the `ShellRoute`'s navigator.
+
+    ```
+        ShellRoute(
+            key: GlobalKey<NavigatorState>(), // ShellRoute key
+            builder: (_) => MainShell(), // Shell
+            routes: [
+                GoRoute(
+                path: 'home', 
+                builder: (_) => HomeScreen(),
+                routes: [
+                    GoRoute(
+                    path: 'post/:id',
+                    builder: (_) => PostScreen(),
+                    ),
+                ],
+                ),
+            ],
+        );
+    ```
+
+    By providing different keys to the `MainRoute` and `ShellRoute`:
+      - The navigation state for each is maintained independently. 
+      - Advantageous when dealing with nested navigation
+      - It allows for efficient state management and avoids unnecessary rebuilds.
+
+- Applying different keys to the `MainRoute` and `ShellRoute` in `GoRouter` is a best practice for managing the navigation state and ensuring a smooth and efficient user experience. The distinct `keys` help maintain independence between the `MainRoute` and `ShellRoute`, providing better control over navigation behavior.
 
 <a id="heading--3-3"></a>
 
@@ -300,6 +368,34 @@ Use this to show fallback UI with messages for the user. It allows handling rout
     ```
 - This transitions with a fade animation on all platforms.
 - The animation and secondaryAnimation arguments represent the beginning and ending transitions that occur when leaving one route to another.
+
+<a id="heading--3-6"></a>
+
+#### Route Guard
+
+- Route guards allow you to apply validation before every navigation, enabling you to control the navigation flow based on specific conditions. 
+- This is achieved by using the `redirect` property of the `GoRouter`.
+
+    ```
+        final router = GoRouter(
+        redirect: (context, state) async {
+            final token = await getIt<Repository>().authToken;
+            final isLoggedIn = token != null;
+
+            if (isLoggedIn) {
+                if (state.matchedLocation == '_login') {
+                    return '_dashboard';
+                }
+            } else {
+                return '_login';
+            }
+            return null;
+        });
+    ```
+
+- This code acts as a basic route guard, ensuring that authenticated users are redirected to the dashboard when trying to access the login route, and unauthenticated users are redirected to the login route when trying to access other routes. This way, users are properly authenticated before accessing certain parts of the application.
+
+
 
 #### Reference 
 - https://docs.page/csells/go_router/navigation
