@@ -4,7 +4,7 @@
 - Getting started
   - [Installation](./docs/starting/installation.md)
   - [Get Started](./docs/starting/get_started.md)
-  - [Configure]()
+  - Configure
      - [Firebase]()
      - [Flavors]()
      - [Web Support]()
@@ -23,8 +23,7 @@
   - [Router](./docs/basics/router.md)
   - [Networking]()
   - [Theming]()
-  - [Multi-Tenancy]()
-  - [Unit Testing]()
+  - [Unit Testing](./docs/basics/unit_testing.md)
   - [Localisation](./docs/essentials/localizations.md)
 - Deployment
   - [Setup Splash Screens & App Icons]()
