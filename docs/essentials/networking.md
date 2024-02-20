@@ -56,3 +56,20 @@ flutter pub run build_runner build --delete-conflicting-outputs
 - `@Header`:This annotation is used on a method parameter to add a additional header to the request.
 
 For more detailed information, please refer to the official Retrofit documentation: [Retrofit](https://pub.dev/packages/retrofit).
+
+
+### Error Handling
+Network error handling is managed by catching `DioException` instances. `DioException` is a custom error type provided by the `Dio` package, which includes various details about the error, such as the response data, request details, and an error message.
+
+When a network request fails, a `DioException` is thrown. This exception is caught in a try-catch block, and then it's converted into a `DataException` using the `DataException.fromDioError(e)` method. 
+```dart
+try {
+  // Network request
+} on DioException catch (e) {
+  throw DataException.fromDioError(e);
+}
+```
+
+This `DataException` can then be used to display a user-friendly error message or to handle the error in a specific way based on the error type. You can customize the DataException class to match your API's error responses.
+
+
