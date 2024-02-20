@@ -8,7 +8,7 @@
      - [Firebase]()
      - [Flavors]()
      - [Web Support]()
-  - [Folder Structure]()
+  - [Folder Structure](./docs/starting/folder_structure.md)
 - Depedencies
    - [Dependencies](./docs/dependencies/dependencies.md)
    - [Dev Dependencies](./docs/dependencies/dev_dependencies.md)
@@ -20,12 +20,12 @@
    - [BLoC]()
    - [Repository]()
    - [Dependencies Injection]()
-  - [Navigation]()
+  - [Router](./docs/basics/router.md)
   - [Networking]()
   - [Theming]()
   - [Multi-Tenancy]()
   - [Unit Testing]()
-  - [Localisation]()
+  - [Localisation](./docs/essentials/localizations.md)
 - Deployment
   - [Setup Splash Screens & App Icons]()
   - [Config Android]()
