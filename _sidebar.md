@@ -22,8 +22,7 @@
    - [Dependencies Injection]()
   - [Router](./docs/basics/router.md)
   - [Networking]()
-  - [Theming]()
-  - [Multi-Tenancy]()
+  - [Theming](./docs/basics/theming.md)
   - [Unit Testing]()
   - [Localisation](./docs/essentials/localizations.md)
 - Deployment
