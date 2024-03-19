@@ -21,7 +21,6 @@
    - [Repository](./docs/essentials/architecture/repository.md)
    - [Dependencies Injection](./docs/essentials/architecture/dependency_injection.md)
   - [Navigation]()
-  - [Networking](./docs/basics/networking.md)
   - [Router](./docs/basics/router.md)
   - [Networking](./docs/basics/networking.md)
   - [Authentication](./docs/basics/authentication.md)
