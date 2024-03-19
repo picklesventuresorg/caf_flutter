@@ -16,10 +16,10 @@
 - UI Components
   - [Pickles Design System]()
 - Basics
-  - [Architecture]()
-   - [BLoC]()
-   - [Repository]()
-   - [Dependencies Injection]()
+  - [Architecture](./docs/essentials/architecture/architecture.md)
+   - [BLoC](./docs/essentials/architecture/bloc.md)
+   - [Repository](./docs/essentials/architecture/repository.md)
+   - [Dependencies Injection](./docs/essentials/architecture/dependency_injection.md)
   - [Navigation]()
   - [Networking](./docs/basics/networking.md)
   - [Router](./docs/basics/router.md)
