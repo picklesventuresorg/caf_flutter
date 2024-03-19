@@ -24,8 +24,7 @@
   - [Networking](./docs/basics/networking.md)
   - [Router](./docs/basics/router.md)
   - [Networking]()
-  - [Theming]()
-  - [Multi-Tenancy]()
+  - [Theming](./docs/basics/theming.md)
   - [Unit Testing]()
   - [Localisation](./docs/basics/localizations.md)
 - Deployment
